@@ -20,7 +20,7 @@ test("displays the dog image after fetching", async () => {
 });
 
 test("displays a loading message before fetching", async () => {
-  render(<App />);
+ await render(<App />);
   expect(screen.queryByText(/Loading/)).toBeInTheDocument();
 
   const img = await screen.findByAltText("A Random Dog");
